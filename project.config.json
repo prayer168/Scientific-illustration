@@ -4,7 +4,7 @@
   "englishTitle": "Scientific Illustration Lab",
   "repositoryName": "Scientific-illustration",
   "repositoryNameSource": "folder",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "language": "zh-TW",
   "audience": ["國小中高年級", "國中", "自然科學教師", "自然觀察學習者"],
   "subject": "自然科學",
@@ -16,4 +16,3 @@
   "githubRepository": "",
   "githubPages": ""
 }
-
