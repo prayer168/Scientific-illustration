@@ -2,7 +2,8 @@
 
 Scientific Illustration Lab 是一套繁體中文、免登入、可離線使用的單頁互動教材。它帶領國小中高年級與國中學生從觀察開始，練習忠實記錄比例、構造、紋理、比例尺與科學標示。
 
-線上教材：[https://prayer168.github.io/Scientific-illustration/](https://prayer168.github.io/Scientific-illustration/)  
+線上教材：[https://prayer168.github.io/Scientific-illustration/](https://prayer168.github.io/Scientific-illustration/)
+
 原始碼：[https://github.com/prayer168/Scientific-illustration](https://github.com/prayer168/Scientific-illustration)
 
 ## 教材內容
