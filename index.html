@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#234c36">
+  <meta name="description" content="科學繪圖探究室：用觀察、比例、構造、標示與查證，完成有證據的科學圖像紀錄。">
+  <title>科學繪圖探究室｜Scientific Illustration Lab</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23234c36'/%3E%3Ccircle cx='29' cy='29' r='14' fill='none' stroke='%23fffdf5' stroke-width='5'/%3E%3Cpath d='m39 39 12 12' stroke='%23e47b3c' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要內容</a>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">⌕</span>
+      <div>
+        <p class="eyebrow">Scientific Illustration Lab</p>
+        <a class="brand-title" href="#home" data-tab-link="home">科學繪圖探究室</a>
+      </div>
+    </div>
+    <div class="utility-bar" aria-label="顯示與學習工具">
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="切換為深色模式" aria-pressed="false"><span aria-hidden="true">◐</span><span>深色</span></button>
+      <button class="icon-button" id="fullscreen-toggle" type="button" aria-label="進入全螢幕"><span aria-hidden="true">⛶</span><span>全螢幕</span></button>
+      <button class="icon-button danger-quiet" id="restart-learning" type="button"><span aria-hidden="true">↺</span><span>重新開始</span></button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="lesson-nav">單元選單</button>
+    </div>
+    <div class="progress-shell">
+      <div class="progress-copy"><span>學習進度</span><strong id="progress-label">1 / 12</strong></div>
+      <div class="progress-track" role="progressbar" aria-label="教材單元進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="8">
+        <span id="progress-fill" style="width:8.33%"></span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="lesson-nav" id="lesson-nav" aria-label="教材單元">
+    <div class="tab-list" role="tablist" aria-label="科學繪圖學習單元">
+      <button role="tab" aria-selected="true" aria-controls="panel-home" id="tab-home" data-tab="home"><span>01</span>首頁</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-basics" id="tab-basics" data-tab="basics" tabindex="-1"><span>02</span>認識科學繪圖</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-compare" id="tab-compare" data-tab="compare" tabindex="-1"><span>03</span>比一比</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-tools" id="tab-tools" data-tab="tools" tabindex="-1"><span>04</span>工具箱</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-steps" id="tab-steps" data-tab="steps" tabindex="-1"><span>05</span>八步驟</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-methods" id="tab-methods" data-tab="methods" tabindex="-1"><span>06</span>方法與類型</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-practice" id="tab-practice" data-tab="practice" tabindex="-1"><span>07</span>觀察任務</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-rules" id="tab-rules" data-tab="rules" tabindex="-1"><span>08</span>規範與迷思</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-gallery" id="tab-gallery" data-tab="gallery" tabindex="-1"><span>09</span>作品欣賞</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-resources" id="tab-resources" data-tab="resources" tabindex="-1"><span>10</span>資源地圖</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-quiz" id="tab-quiz" data-tab="quiz" tabindex="-1"><span>11</span>學習挑戰</button>
+      <button role="tab" aria-selected="false" aria-controls="panel-records" id="tab-records" data-tab="records" tabindex="-1"><span>12</span>我的紀錄</button>
+    </div>
+  </nav>
+
+  <noscript><p class="noscript-note">JavaScript 未啟用：教材文字與圖片仍可閱讀，但頁籤、互動、儲存、測驗與匯出功能需要 JavaScript。</p></noscript>
+
+  <main id="main-content" tabindex="-1">
+    <section class="panel is-active" id="panel-home" role="tabpanel" aria-labelledby="tab-home" data-panel="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="kicker"><span aria-hidden="true">✦</span> 今日任務：成為小小科學繪圖家</p>
+          <h1>科學繪圖<br><em>探究室</em></h1>
+          <p class="hero-en">Scientific Illustration Lab</p>
+          <blockquote>畫得漂亮不是唯一目標，觀察得仔細、記錄得正確，才是科學繪圖的真正精神！</blockquote>
+          <p class="mission-note">今天，你將化身為科學繪圖家，用眼睛發現細節，用鉛筆留下證據。</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-go="basics">開始認識科學繪圖 <span aria-hidden="true">→</span></button>
+            <button class="secondary-button" type="button" data-go="practice">進行觀察任務</button>
+            <button class="text-button" type="button" data-go="gallery">欣賞科學繪圖作品</button>
+          </div>
+          <dl class="lesson-facts">
+            <div><dt>適合</dt><dd>國小中高年級～國中</dd></div>
+            <div><dt>時間</dt><dd>40–60 分鐘</dd></div>
+            <div><dt>帶走</dt><dd>觀察 × 記錄 × 查證</dd></div>
+          </dl>
+        </div>
+        <figure class="hero-visual taped-image">
+          <img src="images/hero/observation-desk.webp" alt="臺灣學生在自然觀察工作桌上以放大鏡觀察葉片，並在筆記本描繪葉脈" width="1536" height="1024" fetchpriority="high">
+          <figcaption><span aria-hidden="true">⌕</span> 先觀察整體，再靠近看細節</figcaption>
+        </figure>
+      </div>
+      <div class="evidence-strip" aria-label="科學繪圖三個核心行動">
+        <article><b>01</b><h2>看見證據</h2><p>注意形狀、數量、位置與紋理。</p></article>
+        <article><b>02</b><h2>忠實記錄</h2><p>不擅自補上沒有觀察到的構造。</p></article>
+        <article><b>03</b><h2>查證修正</h2><p>對照標本、圖鑑與可信資料再完成。</p></article>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-basics" role="tabpanel" aria-labelledby="tab-basics" data-panel="basics" hidden>
+      <header class="section-heading">
+        <p class="section-number">02 — LOOK CLOSER</p>
+        <h1>什麼是科學繪圖？</h1>
+        <p>科學繪圖是結合科學觀察與圖像表達的方法。繪圖者仔細看真實物體，把重要的外形、比例、構造、紋理與特徵忠實留下來。</p>
+      </header>
+      <div class="split-feature">
+        <figure class="taped-image">
+          <img src="images/hero/student-observing-leaf.webp" alt="學生用放大鏡觀察具有葉尖、葉基、鋸齒葉緣、主脈、側脈和葉柄的葉片" width="1536" height="1024" loading="lazy">
+          <figcaption>觀察不是「看過」，而是能指出證據在哪裡。</figcaption>
+        </figure>
+        <div>
+          <h2>科學繪圖要做到</h2>
+          <ol class="principle-list">
+            <li><b>觀察正確</b><span>先看整體，再看局部。</span></li>
+            <li><b>比例合理</b><span>長、寬、位置和數量能互相比較。</span></li>
+            <li><b>特徵清楚</b><span>畫出能辨認對象的關鍵證據。</span></li>
+            <li><b>標示完整</b><span>圖名、構造、日期與比例尺各有用途。</span></li>
+            <li><b>幫助理解</b><span>讓別人看得懂，也能回到實物核對。</span></li>
+            <li><b>不憑空添加</b><span>推測與復原內容必須清楚註明。</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="note-grid">
+        <aside class="did-you-know">
+          <span class="sticker">你知道嗎？</span>
+          <h2>相機發明前，圖就是重要證據</h2>
+          <p>科學家曾依靠繪圖記錄新發現的植物、昆蟲、動物、化石與人體構造。今日已有相機，科學繪圖仍能選擇性強調關鍵構造，呈現照片不易清楚表達的細節。</p>
+        </aside>
+        <aside class="ai-note">
+          <span class="sticker warning">AI 也可能畫錯</span>
+          <h2>生成不等於正確</h2>
+          <p>AI 可能畫錯葉脈、花瓣數、昆蟲足數、翅膀或比例。本網站淘汰了兩張雄蕊數量不可靠的百合圖，改用五瓣朱槿。每張 AI 圖仍應與標本、圖鑑、博物館、大學或政府資料庫比對。</p>
+          <button class="secondary-button" type="button" data-go="practice" data-practice-focus="butterfly">去找 AI 圖的錯誤</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-compare" role="tabpanel" aria-labelledby="tab-compare" data-panel="compare" hidden>
+      <header class="section-heading">
+        <p class="section-number">03 — PURPOSE CHANGES THE PICTURE</p>
+        <h1>同一隻甲蟲，為什麼畫法不同？</h1>
+        <p>沒有哪一種圖像永遠最好；要看你想回答的問題。分類紀錄重視可比對的構造，藝術作品可以重視感受，攝影則保留拍攝瞬間。</p>
+      </header>
+      <div class="comparison-stage">
+        <figure class="taped-image">
+          <img src="images/examples/beetle-four-styles.webp" alt="同一隻六足鍬形蟲以科學線稿、藝術淡彩、卡通插畫與標本攝影感四種方式呈現" width="1536" height="1024" loading="lazy">
+        </figure>
+        <div class="comparison-controls" role="group" aria-label="選擇圖像類型查看說明">
+          <button type="button" class="is-selected" data-compare="scientific">科學繪圖</button>
+          <button type="button" data-compare="art">藝術繪畫</button>
+          <button type="button" data-compare="cartoon">卡通插畫</button>
+          <button type="button" data-compare="photo">科學攝影</button>
+          <div class="comparison-readout" id="comparison-readout" aria-live="polite">
+            <h2>科學繪圖</h2><p>忠於觀察、比例與可辨識特徵；可整理或強調重要構造，常搭配標示與比例尺。</p>
+          </div>
+        </div>
+      </div>
+      <div class="table-scroll" tabindex="0" aria-label="四種圖像比較表，可水平捲動">
+        <table>
+          <thead><tr><th scope="col">比較項目</th><th scope="col">科學繪圖</th><th scope="col">藝術繪畫</th><th scope="col">卡通插畫</th><th scope="col">科學攝影</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">主要目的</th><td>解釋與辨認</td><td>感受與表現</td><td>簡化與傳達</td><td>保存拍攝瞬間</td></tr>
+            <tr><th scope="row">忠於觀察</th><td>必須，以證據為本</td><td>不一定</td><td>不一定</td><td>忠於鏡頭所拍範圍</td></tr>
+            <tr><th scope="row">自由變形</th><td>不可造成錯誤</td><td>可以</td><td>常會誇張</td><td>後製不應誤導</td></tr>
+            <tr><th scope="row">構造標示</th><td>視任務需要</td><td>通常不需要</td><td>通常不需要</td><td>可後製加入</td></tr>
+            <tr><th scope="row">比例尺</th><td>必要時加入</td><td>通常不需要</td><td>通常不需要</td><td>顯微或標本照常需要</td></tr>
+            <tr><th scope="row">背景</th><td>簡化，讓主體清楚</td><td>可自由安排</td><td>可裝飾</td><td>依拍攝環境而定</td></tr>
+            <tr><th scope="row">使用場合</th><td>研究、教學、分類</td><td>創作、展覽</td><td>故事、識別、娛樂</td><td>觀察存證、量測</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mini-challenge field-note">
+        <h2>哪一張比較適合作為昆蟲分類紀錄？</h2>
+        <div class="choice-row" role="group" aria-label="昆蟲分類紀錄判斷">
+          <button type="button" data-classify="scientific">科學繪圖</button>
+          <button type="button" data-classify="art">藝術繪畫</button>
+          <button type="button" data-classify="cartoon">卡通插畫</button>
+          <button type="button" data-classify="photo">只要照片就好</button>
+        </div>
+        <p class="feedback" id="classification-feedback" role="status">選一個答案，再讀讀證據。</p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools" data-panel="tools" hidden>
+      <header class="section-heading">
+        <p class="section-number">04 — PACK YOUR FIELD KIT</p>
+        <h1>工具不是越多越好，要用在對的階段</h1>
+        <p>先從鉛筆、橡皮擦、尺、放大鏡與紀錄本開始；需要更細節或正式完稿時，再加入顯微鏡、代針筆、顏料或數位工具。</p>
+      </header>
+      <figure class="wide-visual taped-image">
+        <img src="images/tools/scientific-toolkit.webp" alt="科學繪圖工具組，包含鉛筆、自動鉛筆、橡皮擦、尺、放大鏡、解剖顯微鏡、代針筆、色鉛筆、水彩、素描本、相機、數位板與觸控筆" width="1536" height="1024" loading="lazy">
+      </figure>
+      <div class="tool-grid">
+        <article><span>01</span><h2>HB／2H／2B 鉛筆</h2><p><b>用途：</b>2H 淡稿、HB 輪廓、2B 加深。</p><p><b>階段：</b>草圖到細節。</p><small>提醒：不要一次壓太深。替代：一般 HB 鉛筆。</small></article>
+        <article><span>02</span><h2>自動鉛筆</h2><p><b>用途：</b>穩定細線與局部結構。</p><p><b>階段：</b>細節、標示線。</p><small>提醒：筆芯易折。替代：削尖的木鉛筆。</small></article>
+        <article><span>03</span><h2>橡皮擦</h2><p><b>用途：</b>淡化輔助線、修正比例。</p><p><b>階段：</b>草圖與修正。</p><small>提醒：輕擦避免破紙。替代：乾淨軟橡皮。</small></article>
+        <article><span>04</span><h2>尺與比例尺</h2><p><b>用途：</b>量測、畫直線與比例尺。</p><p><b>階段：</b>觀察前、標示。</p><small>提醒：寫清楚單位。替代：印有刻度的書籤。</small></article>
+        <article><span>05</span><h2>放大鏡</h2><p><b>用途：</b>看葉緣、毛、紋理。</p><p><b>階段：</b>觀察與核對。</p><small>提醒：不要用來聚焦陽光。替代：平板相機放大。</small></article>
+        <article><span>06</span><h2>解剖顯微鏡</h2><p><b>用途：</b>觀察立體小物與表面。</p><p><b>階段：</b>局部放大。</p><small>提醒：由低倍率開始。替代：夾式微距鏡頭。</small></article>
+        <article><span>07</span><h2>黑色代針筆</h2><p><b>用途：</b>正式清稿與點描。</p><p><b>階段：</b>確認無誤後完稿。</p><small>提醒：乾後再擦鉛筆。替代：細尖黑筆。</small></article>
+        <article><span>08</span><h2>色鉛筆</h2><p><b>用途：</b>標示辨識用色與漸層。</p><p><b>階段：</b>完成線稿之後。</p><small>提醒：顏色服務於特徵。替代：普通彩色鉛筆。</small></article>
+        <article><span>09</span><h2>水彩</h2><p><b>用途：</b>透明疊色呈現自然色。</p><p><b>階段：</b>有需要的完稿。</p><small>提醒：先試色、等乾。替代：水溶性色鉛筆。</small></article>
+        <article><span>10</span><h2>素描紙／紀錄本</h2><p><b>用途：</b>保存原始觀察與修改。</p><p><b>階段：</b>全程。</p><small>提醒：標日期與頁碼。替代：空白筆記紙。</small></article>
+        <article><span>11</span><h2>相機／平板</h2><p><b>用途：</b>記錄角度、顏色與環境。</p><p><b>階段：</b>觀察輔助。</p><small>提醒：照片不能取代現場觀察。替代：借用教室裝置。</small></article>
+        <article><span>12</span><h2>數位繪圖板</h2><p><b>用途：</b>圖層、透明度與局部放大。</p><p><b>階段：</b>數位草圖到完稿。</p><small>提醒：保留原始圖層。替代：觸控筆平板。</small></article>
+      </div>
+      <div class="toolbox-game field-note">
+        <span class="sticker">我的繪圖工具箱</span>
+        <h2>準備畫一片葉子，你會帶哪些？</h2>
+        <p>選出五個基本且合適的工具，再檢查工具箱。</p>
+        <div class="choice-chips" id="tool-choices">
+          <button type="button" data-tool-choice="pencil" data-correct="true" aria-pressed="false">鉛筆</button>
+          <button type="button" data-tool-choice="ruler" data-correct="true" aria-pressed="false">尺</button>
+          <button type="button" data-tool-choice="magnifier" data-correct="true" aria-pressed="false">放大鏡</button>
+          <button type="button" data-tool-choice="notebook" data-correct="true" aria-pressed="false">紀錄本</button>
+          <button type="button" data-tool-choice="eraser" data-correct="true" aria-pressed="false">橡皮擦</button>
+          <button type="button" data-tool-choice="perfume" data-correct="false" aria-pressed="false">香水</button>
+          <button type="button" data-tool-choice="stamp" data-correct="false" aria-pressed="false">造型印章</button>
+          <button type="button" data-tool-choice="glitter" data-correct="false" aria-pressed="false">亮粉膠</button>
+        </div>
+        <button class="primary-button compact" id="check-tools" type="button">檢查工具箱</button>
+        <button class="text-button compact" id="reset-tools" type="button">重設</button>
+        <p class="feedback" id="tool-feedback" role="status">先選擇，再檢查。</p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-steps" role="tabpanel" aria-labelledby="tab-steps" data-panel="steps" hidden>
+      <header class="section-heading">
+        <p class="section-number">05 — EIGHT STEPS, ONE CAREFUL RECORD</p>
+        <h1>從一條淡線，到一張有證據的圖</h1>
+        <p>播放逐步導覽，觀察每一步增加了什麼。動畫每次只強調一個決定，讓你知道「現在要看什麼」。</p>
+      </header>
+      <div class="step-stage">
+        <figure class="step-visual taped-image">
+          <div class="step-image-crop" id="step-image-crop" style="--step:0">
+            <img src="images/steps/leaf-eight-steps.webp" alt="同一片葉子從輪廓、中軸、葉脈、鋸齒、紋理、比例尺到完成線稿的八格過程" width="1536" height="1024" loading="lazy">
+            <span class="step-window" aria-hidden="true"></span>
+          </div>
+          <figcaption id="step-caption">步驟一：選擇觀察對象</figcaption>
+        </figure>
+        <div class="step-control-card">
+          <p class="step-counter" id="step-counter">01 / 08</p>
+          <h2 id="step-title">選擇觀察對象</h2>
+          <p id="step-description">從葉片、花朵、果實、種子、昆蟲、羽毛、貝殼或岩石中，選一個能安全、穩定觀察的對象。</p>
+          <dl>
+            <div><dt>操作提醒</dt><dd id="step-tip">選擇完整、光線充足、可以從不同方向看的標本。</dd></div>
+            <div><dt>常見錯誤</dt><dd id="step-mistake">一開始就選太複雜或仍快速移動的對象。</dd></div>
+          </dl>
+          <div class="step-buttons">
+            <button type="button" id="step-prev" aria-label="上一步">←</button>
+            <button class="primary-button compact" type="button" id="step-play" aria-pressed="false">播放</button>
+            <button type="button" id="step-next" aria-label="下一步">→</button>
+            <button class="text-button compact" type="button" id="step-reset">重播</button>
+          </div>
+          <label class="speed-control" for="step-speed">播放速度
+            <select id="step-speed"><option value="3500">慢速</option><option value="2200" selected>一般</option><option value="1200">快速</option></select>
+          </label>
+        </div>
+      </div>
+      <ol class="step-list">
+        <li><b>選擇觀察對象</b><span>葉、花、種子、昆蟲、羽毛、貝殼或岩石。</span></li>
+        <li><b>先觀察，不急著畫</b><span>從不同方向找出外形與最重要的特徵。</span></li>
+        <li><b>決定觀察角度</b><span>正面、側面、背面、腹面、俯視或剖面。</span></li>
+        <li><b>畫出基本外形</b><span>用淡線安排長、寬、輪廓與主要比例。</span></li>
+        <li><b>加入構造與細節</b><span>葉脈、觸角、節、毛、鱗片或表面紋理。</span></li>
+        <li><b>檢查比例與對稱</b><span>比較長度、寬度、位置與數量。</span></li>
+        <li><b>加入科學標示</b><span>圖名、日期、地點、角度、構造、比例尺與說明。</span></li>
+        <li><b>比較、修正與完成</b><span>再次對照真實物體，修正錯誤與遺漏。</span></li>
+      </ol>
+    </section>
+
+    <section class="panel" id="panel-methods" role="tabpanel" aria-labelledby="tab-methods" data-panel="methods" hidden>
+      <header class="section-heading">
+        <p class="section-number">06 — METHODS & FIELDS</p>
+        <h1>十種方法，八種科學繪圖</h1>
+        <p>複雜的觀察，可以拆成一個個可執行的方法。選擇方法時，先問：我想讓哪個證據變清楚？</p>
+      </header>
+      <h2 class="subheading">十種觀察與繪圖方法</h2>
+      <div class="method-grid">
+        <article><i>01</i><h3>輪廓觀察法</h3><p>先抓整體形狀與邊緣特徵，暫時不畫內部細節。</p></article>
+        <article><i>02</i><h3>幾何拆解法</h3><p>把複雜物拆成圓、橢圓、三角、長方或圓柱。</p></article>
+        <article><i>03</i><h3>格線比例法</h3><p>用格線比較位置，避免局部越畫越大或偏移。</p></article>
+        <article><i>04</i><h3>中軸線與對稱</h3><p>適合葉片、花朵、昆蟲等左右近似對稱物。</p></article>
+        <article><i>05</i><h3>負空間觀察</h3><p>觀察主體周圍空白形狀，反過來校正輪廓。</p></article>
+        <article><i>06</i><h3>局部放大</h3><p>放大花蕊、口器、翅脈、葉緣或種子表面。</p></article>
+        <article><i>07</i><h3>剖面與分解圖</h3><p>呈現果實內部、花部、種子、地層或裝置關係。</p></article>
+        <article><i>08</i><h3>點描與線紋理</h3><p>以點與線的密度表現毛、凹凸、暗部與質感。</p></article>
+        <article><i>09</i><h3>比例尺紀錄</h3><p>量測實物並畫出代表已知長度的線段與單位。</p></article>
+        <article><i>10</i><h3>數位科學繪圖</h3><p>使用圖層、透明度與局部放大，但不取代真實觀察。</p></article>
+      </div>
+      <h2 class="subheading">八種科學繪圖類型</h2>
+      <div class="type-grid">
+        <article><img src="images/gallery/dandelion-whole-plant.webp" alt="蒲公英全株、根部、花序與冠毛種子的科學繪圖" width="1536" height="1024" loading="lazy"><div><span>BOTANY</span><h3>植物科學繪圖</h3><p>葉、花、果實、種子、根與全株；要注意葉序、葉脈與花部數量。</p></div></article>
+        <article><img src="images/examples/beetle-dorsal.webp" alt="六足鍬形蟲背面科學繪圖" width="1536" height="1024" loading="lazy"><div><span>ENTOMOLOGY</span><h3>昆蟲科學繪圖</h3><p>頭、胸、腹、六足、翅脈、觸角與口器的數量和連接位置。</p></div></article>
+        <article><img src="images/examples/taipei-tree-frog.webp" alt="臺北樹蛙背面與側面科學觀察圖" width="1536" height="1024" loading="lazy"><div><span>ZOOLOGY</span><h3>動物科學繪圖</h3><p>身體比例、外部構造、骨骼或行為姿勢；同一個體可畫多角度。</p></div></article>
+        <article><img src="images/examples/sparrow-feather-beak.webp" alt="歐亞樹麻雀、飛羽與鳥喙局部科學繪圖" width="1536" height="1024" loading="lazy"><div><span>ORNITHOLOGY</span><h3>鳥類科學繪圖</h3><p>羽色、喙形、腳、翅膀與姿態，都能提供生活方式的線索。</p></div></article>
+        <article><img src="images/examples/shell-texture.webp" alt="海螺殼側面與螺旋生長紋局部放大圖" width="1536" height="1024" loading="lazy"><div><span>MARINE LIFE</span><h3>海洋生物科學繪圖</h3><p>魚、貝、甲殼類、珊瑚與浮游生物；易失真的軟體構造要特別記錄。</p></div></article>
+        <article><img src="images/examples/ammonite-fossil.webp" alt="菊石化石輪廓、殼室與縫合線局部放大圖" width="1536" height="1024" loading="lazy"><div><span>GEOLOGY</span><h3>地質與化石繪圖</h3><p>岩石紋理、晶形、化石輪廓與地層剖面，常需比例尺與方向。</p></div></article>
+        <article><img src="images/examples/moon-phases.webp" alt="八個連續階段的月相觀察紀錄圖" width="1536" height="1024" loading="lazy"><div><span>ASTRONOMY</span><h3>天文科學繪圖</h3><p>月相、太陽黑子、行星表面與望遠鏡視野，日期時間尤其重要。</p></div></article>
+        <article><img src="images/examples/reflection-apparatus.webp" alt="平面鏡、角度板、入射光與反射光的實驗裝置圖" width="1536" height="1024" loading="lazy"><div><span>APPARATUS</span><h3>實驗裝置圖</h3><p>器材、連接、材料位置與力或光線方向，應讓別人能照圖重現。</p></div></article>
+      </div>
+      <p class="ai-disclaimer">本頁圖片皆為 AI 生成之教學示意圖，實際物種特徵仍應配合標本、圖鑑或可信資料查證。</p>
+    </section>
+
+    <section class="panel" id="panel-practice" role="tabpanel" aria-labelledby="tab-practice" data-panel="practice" hidden>
+      <header class="section-heading">
+        <p class="section-number">07 — OBSERVE, DECIDE, EXPLAIN</p>
+        <h1>四個互動觀察任務</h1>
+        <p>不是猜答案，而是指出「我在哪裡看到什麼」。每個任務都有重設與即時說明，也能用鍵盤或手機點選完成。</p>
+      </header>
+      <div class="practice-tabs" role="tablist" aria-label="觀察任務">
+        <button type="button" role="tab" aria-selected="true" data-practice-tab="leaf">1 葉片特徵</button>
+        <button type="button" role="tab" aria-selected="false" data-practice-tab="beetle">2 昆蟲觀察</button>
+        <button type="button" role="tab" aria-selected="false" data-practice-tab="butterfly">3 科學圖除錯</button>
+        <button type="button" role="tab" aria-selected="false" data-practice-tab="labels">4 科學標示</button>
+      </div>
+      <section class="practice-panel is-active" data-practice-panel="leaf">
+        <div class="task-intro"><p class="task-label">任務一</p><h2>找出葉片特徵</h2><p>依提示點選圖上對應位置。已完成的構造會留在觀察清單。</p></div>
+        <div class="hotspot-layout">
+          <div class="hotspot-image leaf-hotspots">
+            <img src="images/hero/student-observing-leaf.webp" alt="待辨認構造的卵形鋸齒緣葉片" width="1536" height="1024" loading="lazy">
+            <button type="button" style="--x:19%;--y:47%" data-leaf-part="葉尖"><span>1</span><span class="sr-only">葉尖位置</span></button>
+            <button type="button" style="--x:40%;--y:76%" data-leaf-part="葉基"><span>2</span><span class="sr-only">葉基位置</span></button>
+            <button type="button" style="--x:28%;--y:62%" data-leaf-part="葉緣"><span>3</span><span class="sr-only">葉緣位置</span></button>
+            <button type="button" style="--x:34%;--y:61%" data-leaf-part="主脈"><span>4</span><span class="sr-only">主脈位置</span></button>
+            <button type="button" style="--x:32%;--y:54%" data-leaf-part="側脈"><span>5</span><span class="sr-only">側脈位置</span></button>
+            <button type="button" style="--x:43%;--y:81%" data-leaf-part="葉柄"><span>6</span><span class="sr-only">葉柄位置</span></button>
+          </div>
+          <div class="task-console">
+            <p>這次要找：<strong id="leaf-target">葉尖</strong></p>
+            <p class="feedback" id="leaf-feedback" role="status">葉尖是葉片最前端的位置。</p>
+            <ol id="leaf-found" aria-label="已找到的葉片構造"></ol>
+            <button class="secondary-button compact" type="button" data-reset-task="leaf">重設任務</button>
+          </div>
+        </div>
+      </section>
+      <section class="practice-panel" data-practice-panel="beetle" hidden>
+        <div class="task-intro"><p class="task-label">任務二</p><h2>完成昆蟲觀察</h2><p>逐題核對圖像。答完後會解釋證據，不只告訴你對錯。</p></div>
+        <div class="practice-split">
+          <figure class="taped-image"><img src="images/examples/beetle-dorsal.webp" alt="可觀察頭胸腹、六足、觸角與翅鞘的鍬形蟲背面圖" width="1536" height="1024" loading="lazy"></figure>
+          <form id="beetle-observation" class="observation-form">
+            <fieldset><legend>1. 身體有幾個主要部分？</legend><label><input type="radio" name="body" value="3"> 3 個：頭、胸、腹</label><label><input type="radio" name="body" value="2"> 2 個</label></fieldset>
+            <fieldset><legend>2. 有幾隻腳？</legend><label><input type="radio" name="legs" value="6"> 6 隻</label><label><input type="radio" name="legs" value="8"> 8 隻</label></fieldset>
+            <fieldset><legend>3. 觸角與翅鞘有什麼特徵？</legend><label><input type="radio" name="features" value="pair"> 一對觸角，左右一對翅鞘</label><label><input type="radio" name="features" value="random"> 數量和位置不固定</label></fieldset>
+            <fieldset><legend>4. 身體是否左右對稱？</legend><label><input type="radio" name="symmetry" value="yes"> 大致左右對稱</label><label><input type="radio" name="symmetry" value="no"> 完全不對稱</label></fieldset>
+            <button class="primary-button compact" type="submit">送出觀察</button><button class="text-button compact" type="reset">重設</button>
+            <p class="feedback" id="beetle-feedback" role="status">請完成四項觀察。</p>
+          </form>
+        </div>
+      </section>
+      <section class="practice-panel" data-practice-panel="butterfly" hidden>
+        <div class="task-intro"><p class="task-label">任務三</p><h2>科學繪圖除錯</h2><p>這張圖故意畫錯。選出你看見的六種問題，再讀解釋。</p></div>
+        <div class="practice-split">
+          <figure class="taped-image"><img src="images/examples/butterfly-error.webp" alt="故意含有翅膀比例、足數、斑紋、比例尺、交叉標示線與裝飾錯誤的蝴蝶圖" width="1536" height="1024" loading="lazy"></figure>
+          <div class="error-finder" id="error-finder">
+            <button type="button" data-error="wing" aria-pressed="false">翅膀比例錯誤</button>
+            <button type="button" data-error="legs" aria-pressed="false">足的數量錯誤</button>
+            <button type="button" data-error="pattern" aria-pressed="false">左右斑紋不一致</button>
+            <button type="button" data-error="scale" aria-pressed="false">缺少比例尺</button>
+            <button type="button" data-error="leaders" aria-pressed="false">標示線交叉</button>
+            <button type="button" data-error="decoration" aria-pressed="false">加入未觀察裝飾</button>
+            <button class="primary-button compact" id="check-errors" type="button">檢查答案</button>
+            <button class="text-button compact" data-reset-task="butterfly" type="button">重設</button>
+            <p class="feedback" id="error-feedback" role="status">找出你能用觀察證據說明的問題。</p>
+          </div>
+        </div>
+      </section>
+      <section class="practice-panel" data-practice-panel="labels" hidden>
+        <div class="task-intro"><p class="task-label">任務四</p><h2>標示科學繪圖</h2><p>可拖曳標籤到位置，也可先點標籤、再點位置；兩種操作得到相同結果。</p></div>
+        <div class="labeling-game" id="labeling-game">
+          <div class="label-bank" aria-label="可用標籤">
+            <button type="button" draggable="true" data-label="圖名">圖名</button>
+            <button type="button" draggable="true" data-label="構造名稱">構造名稱</button>
+            <button type="button" draggable="true" data-label="比例尺">比例尺</button>
+            <button type="button" draggable="true" data-label="觀察日期">觀察日期</button>
+            <button type="button" draggable="true" data-label="觀察地點">觀察地點</button>
+            <button type="button" draggable="true" data-label="觀察者">觀察者</button>
+          </div>
+          <div class="record-diagram">
+            <div class="drop-zone" data-accept="圖名" tabindex="0"><span>①</span><b>頁面上方中央</b></div>
+            <div class="drop-zone" data-accept="構造名稱" tabindex="0"><span>②</span><b>標示線末端</b></div>
+            <div class="drop-zone" data-accept="比例尺" tabindex="0"><span>③</span><b>圖像下方</b></div>
+            <div class="drop-zone" data-accept="觀察日期" tabindex="0"><span>④</span><b>紀錄欄第一列</b></div>
+            <div class="drop-zone" data-accept="觀察地點" tabindex="0"><span>⑤</span><b>紀錄欄第二列</b></div>
+            <div class="drop-zone" data-accept="觀察者" tabindex="0"><span>⑥</span><b>紀錄欄第三列</b></div>
+          </div>
+          <button class="secondary-button compact" data-reset-task="labels" type="button">重設</button>
+          <p class="feedback" id="label-feedback" role="status">選一個標籤，再選它應放的位置。</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-rules" role="tabpanel" aria-labelledby="tab-rules" data-panel="rules" hidden>
+      <header class="section-heading">
+        <p class="section-number">08 — CLEAR RULES, FLEXIBLE FORMATS</p>
+        <h1>基本規範與十個常見迷思</h1>
+        <p>這些是實用的基本原則，不是全球完全一致的硬規定。研究領域、學校、比賽或出版單位可能有不同格式，請先確認任務要求。</p>
+      </header>
+      <div class="rules-layout">
+        <figure class="taped-image"><img src="images/examples/correct-wrong-leaf.webp" alt="左側是大而清楚、葉脈合理的葉片圖，右側是過小、塗抹、變形與標示線交叉的錯誤圖" width="1536" height="1024" loading="lazy"></figure>
+        <ol class="rule-list">
+          <li>使用清晰、連續的線條。</li><li>避免反覆塗抹模糊的線。</li><li>圖像要畫得足夠大。</li><li>保持合理比例。</li>
+          <li>不添加沒有觀察到的構造。</li><li>標示線用直線，盡量不交叉。</li><li>標示文字排列整齊。</li><li>必要時加入比例尺。</li>
+          <li>記錄日期、地點與工具。</li><li>上色為了呈現特徵，不只為裝飾。</li><li>推測或復原圖要清楚註明。</li><li>保存原始觀察與修改紀錄。</li>
+        </ol>
+      </div>
+      <h2 class="subheading">翻開迷思卡，看看理由</h2>
+      <div class="myth-grid">
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>01</b>科學繪圖一定要畫得像照片嗎？</span><span class="back"><b>不一定。</b>重點是構造與證據清楚；有時線稿比照片更能凸顯翅脈。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>02</b>不會畫畫就不能做科學繪圖嗎？</span><span class="back"><b>不是。</b>可以用幾何拆解、格線與多次修正，把觀察能力一步步畫出來。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>03</b>不好看的部分可以省略嗎？</span><span class="back"><b>要看目的。</b>破損、病斑可能是重要證據；省略時應註明範圍與理由。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>04</b>可以加入想像花紋嗎？</span><span class="back"><b>不可以混入觀察圖。</b>若是推測復原，必須明確標示，不能讓人誤以為已觀察到。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>05</b>畫得越小越節省空間嗎？</span><span class="back"><b>常會失去細節。</b>主體畫大，才有空間畫清楚構造與標示。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>06</b>每張科學圖都一定要上色嗎？</span><span class="back"><b>不一定。</b>線稿、點描也能有效表達；只有顏色是辨識證據時才特別重要。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>07</b>有照片後就不需要科學繪圖嗎？</span><span class="back"><b>兩者互補。</b>照片保存瞬間，科學圖可整合多次觀察並凸顯關鍵構造。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>08</b>用平板畫就不算科學繪圖嗎？</span><span class="back"><b>媒材不是判準。</b>是否忠於觀察、保留證據並清楚標示才是重點。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>09</b>標示越多越好嗎？</span><span class="back"><b>不是。</b>只標與任務有關的關鍵構造，避免線條交叉與資訊壅塞。</span></button>
+        <button class="myth-card" type="button" aria-expanded="false"><span class="front"><b>10</b>科學繪圖只能畫生物嗎？</span><span class="back"><b>不是。</b>化石、礦物、月相、地層與實驗裝置也常用科學繪圖記錄。</span></button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-gallery" role="tabpanel" aria-labelledby="tab-gallery" data-panel="gallery" hidden>
+      <header class="section-heading gallery-heading">
+        <div><p class="section-number">09 — STUDY THE EVIDENCE</p><h1>科學繪圖作品欣賞</h1><p>點選分類篩選，再放大查看。觀察作品的目的、媒材和可辨識證據，而不只評價「漂不漂亮」。</p></div>
+        <img src="images/hero/illustrator-workdesk.webp" alt="科學繪圖家以標本、放大鏡與尺完成植物觀察圖" width="1536" height="1024" loading="lazy">
+      </header>
+      <div class="filter-row" role="group" aria-label="作品分類">
+        <button class="is-selected" type="button" data-filter="all">全部</button><button type="button" data-filter="plant">植物</button><button type="button" data-filter="flower">花朵</button>
+        <button type="button" data-filter="seed">種子</button><button type="button" data-filter="insect">昆蟲</button><button type="button" data-filter="bird">鳥類</button>
+        <button type="button" data-filter="marine">海洋生物</button><button type="button" data-filter="fossil">化石</button><button type="button" data-filter="astronomy">天文</button><button type="button" data-filter="apparatus">實驗裝置</button>
+      </div>
+      <div class="gallery-grid">
+        <article data-category="plant"><button type="button" class="gallery-open" data-src="images/gallery/dandelion-whole-plant.webp" data-title="蒲公英全株觀察"><img src="images/gallery/dandelion-whole-plant.webp" alt="蒲公英全株、根、花序和冠毛種子科學圖" width="1536" height="1024" loading="lazy"></button><div><span>植物</span><h2>蒲公英全株觀察</h2><p><b>對象：</b>蒲公英｜<b>媒材：</b>石墨淡彩</p><p><b>重點：</b>基生葉、無葉花莖、主根與冠毛果實。</p></div></article>
+        <article data-category="flower"><button type="button" class="gallery-open" data-src="images/examples/hibiscus-front-side.webp" data-title="朱槿雙視角"><img src="images/examples/hibiscus-front-side.webp" alt="朱槿花正面與側面科學觀察圖" width="1536" height="1024" loading="lazy"></button><div><span>花朵</span><h2>朱槿雙視角</h2><p><b>對象：</b>朱槿｜<b>媒材：</b>石墨淡彩</p><p><b>重點：</b>五瓣與伸出的雄蕊筒。</p></div></article>
+        <article data-category="seed"><button type="button" class="gallery-open" data-src="images/gallery/seed-morphology.webp" data-title="四種種子形態"><img src="images/gallery/seed-morphology.webp" alt="翅果、豆種子剖面、蒲公英冠毛瘦果與椰子剖面" width="1536" height="1024" loading="lazy"></button><div><span>種子</span><h2>四種種子形態</h2><p><b>對象：</b>四類果實與種子｜<b>媒材：</b>石墨淡彩</p><p><b>重點：</b>散播構造與剖面差異。</p></div></article>
+        <article data-category="insect"><button type="button" class="gallery-open" data-src="images/examples/beetle-dorsal.webp" data-title="鍬形蟲背面"><img src="images/examples/beetle-dorsal.webp" alt="六足鍬形蟲背面科學繪圖" width="1536" height="1024" loading="lazy"></button><div><span>昆蟲</span><h2>鍬形蟲背面</h2><p><b>對象：</b>鍬形蟲｜<b>媒材：</b>石墨淡彩</p><p><b>重點：</b>六足連接胸部、觸角與翅鞘對稱。</p></div></article>
+        <article data-category="bird"><button type="button" class="gallery-open" data-src="images/examples/sparrow-feather-beak.webp" data-title="麻雀與羽毛"><img src="images/examples/sparrow-feather-beak.webp" alt="歐亞樹麻雀、飛羽與鳥喙局部圖" width="1536" height="1024" loading="lazy"></button><div><span>鳥類</span><h2>麻雀與羽毛</h2><p><b>對象：</b>歐亞樹麻雀｜<b>媒材：</b>石墨淡彩</p><p><b>重點：</b>喙形、羽片、羽軸與停棲足。</p></div></article>
+        <article data-category="marine"><button type="button" class="gallery-open" data-src="images/examples/shell-texture.webp" data-title="海螺殼紋理"><img src="images/examples/shell-texture.webp" alt="海螺殼與螺旋生長紋局部放大" width="1536" height="1024" loading="lazy"></button><div><span>海洋生物</span><h2>海螺殼紋理</h2><p><b>對象：</b>海螺殼｜<b>媒材：</b>點描淡彩</p><p><b>重點：</b>螺塔、殼口與連續生長紋。</p></div></article>
+        <article data-category="fossil"><button type="button" class="gallery-open" data-src="images/examples/ammonite-fossil.webp" data-title="菊石化石"><img src="images/examples/ammonite-fossil.webp" alt="菊石化石與縫合線局部放大" width="1536" height="1024" loading="lazy"></button><div><span>化石</span><h2>菊石化石</h2><p><b>對象：</b>菊石化石｜<b>媒材：</b>石墨點描</p><p><b>重點：</b>盤旋殼室與縫合線。</p></div></article>
+        <article data-category="astronomy"><button type="button" class="gallery-open" data-src="images/examples/moon-phases.webp" data-title="月相觀察序列"><img src="images/examples/moon-phases.webp" alt="新月到滿月再到殘月的八階段月相圖" width="1536" height="1024" loading="lazy"></button><div><span>天文</span><h2>月相觀察序列</h2><p><b>對象：</b>月相｜<b>媒材：</b>石墨</p><p><b>重點：</b>明暗面隨日期連續變化。</p></div></article>
+        <article data-category="apparatus"><button type="button" class="gallery-open" data-src="images/examples/reflection-apparatus.webp" data-title="光反射裝置"><img src="images/examples/reflection-apparatus.webp" alt="平面鏡角度板與入射、反射光線裝置" width="1536" height="1024" loading="lazy"></button><div><span>實驗裝置</span><h2>光反射裝置</h2><p><b>對象：</b>平面鏡實驗｜<b>媒材：</b>石墨淡彩</p><p><b>重點：</b>器材位置與光線方向。</p></div></article>
+      </div>
+      <p class="ai-disclaimer">本圖庫均為 AI 生成之教學示意圖，實際物種特徵仍應配合標本、圖鑑或可信資料查證。</p>
+    </section>
+
+    <section class="panel" id="panel-resources" role="tabpanel" aria-labelledby="tab-resources" data-panel="resources" hidden>
+      <header class="section-heading">
+        <p class="section-number">10 — FOLLOW TRUSTED TRAILS</p>
+        <h1>國內外科學繪圖資源地圖</h1>
+        <p>優先選用政府、博物館、大學、圖書館與學會的官方網站。外部內容與網址可能更新，使用時仍請留意網站公告。</p>
+      </header>
+      <div class="resource-map">
+        <div class="map-legend" role="group" aria-label="資源地區篩選">
+          <button class="is-selected" type="button" data-resource-region="all">全部資源</button>
+          <button type="button" data-resource-region="tw">臺灣</button>
+          <button type="button" data-resource-region="world">國外</button>
+        </div>
+        <div class="resource-grid" id="resource-grid">
+          <p class="loading-note">官方資源清單載入中；即使載入失敗，頁面底部仍保留查證說明。</p>
+        </div>
+      </div>
+      <p class="verification-date">外部連結最後查證日期：<time datetime="2026-07-19">2026 年 7 月 19 日</time></p>
+    </section>
+
+    <section class="panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" data-panel="quiz" hidden>
+      <header class="section-heading">
+        <p class="section-number">11 — CHALLENGE YOUR EVIDENCE SKILLS</p>
+        <h1>科學繪圖學習挑戰</h1>
+        <p>共 10 題，涵蓋目的、順序、工具、比例尺、標示、AI 查證、科學誠信與修改反思。每題作答後立即解析。</p>
+      </header>
+      <div id="quiz-app" class="quiz-app">
+        <div class="quiz-intro">
+          <p class="big-score">10</p><div><h2>準備好了嗎？</h2><p>題目包含單選、多選、排序、配對、找錯與情境應用。</p></div>
+          <button class="primary-button" id="start-quiz" type="button">開始挑戰</button>
+        </div>
+        <div id="quiz-stage" hidden></div>
+        <div id="quiz-results" hidden></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-records" role="tabpanel" aria-labelledby="tab-records" data-panel="records" hidden>
+      <header class="section-heading">
+        <p class="section-number">12 — KEEP THE ORIGINAL EVIDENCE</p>
+        <h1>我的科學繪圖紀錄</h1>
+        <p>欄位會自動儲存在這台裝置的瀏覽器中。你可以列印、匯出 Markdown 或下載空白學習單，不需要登入。</p>
+      </header>
+      <div class="record-progress">
+        <div><span>紀錄完成度</span><strong id="record-progress-label">0%</strong></div>
+        <div class="progress-track" role="progressbar" aria-label="觀察紀錄完成度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="record-progress-fill"></span></div>
+      </div>
+      <form id="observation-record" class="record-form">
+        <div class="form-grid">
+          <label>作品名稱<input name="title" autocomplete="off" placeholder="例：校園樟樹葉"></label>
+          <label>觀察日期<input name="date" type="date"></label>
+          <label>觀察地點<input name="location" autocomplete="off" placeholder="例：學校中庭"></label>
+          <label>觀察對象<input name="subject" autocomplete="off" placeholder="物種或物件名稱"></label>
+          <label>使用工具<input name="tools" autocomplete="off" placeholder="鉛筆、尺、放大鏡"></label>
+          <label>物體實際大小<input name="size" autocomplete="off" placeholder="例：長 8.4 cm"></label>
+          <label class="span-2">主要外形<textarea name="shape" rows="3" placeholder="輪廓、長寬、對稱或幾何形狀"></textarea></label>
+          <label class="span-2">特殊構造<textarea name="structures" rows="3" placeholder="數量、位置、連接方式"></textarea></label>
+          <label class="span-2">顏色與紋理<textarea name="texture" rows="3" placeholder="顏色分布、光澤、毛、凹凸、線紋"></textarea></label>
+          <label class="span-2">我的發現<textarea name="findings" rows="3" placeholder="最重要或最意外的觀察"></textarea></label>
+          <label class="span-2">尚未確定的地方<textarea name="uncertain" rows="3" placeholder="還需要查證的構造或名稱"></textarea></label>
+          <label class="span-2">資料查證來源<textarea name="sources" rows="3" placeholder="書名、博物館、政府或大學資料庫網址"></textarea></label>
+          <label class="span-2">修改紀錄<textarea name="revisions" rows="3" placeholder="哪裡改過？根據什麼證據？"></textarea></label>
+          <label class="span-2">自我評量<select name="selfRating"><option value="">請選擇</option><option>我能獨立完成並說明證據</option><option>我大致完成，還要核對部分構造</option><option>我需要回到步驟單元再練習</option></select></label>
+        </div>
+        <fieldset class="self-check">
+          <legend>科學繪圖自我檢核</legend>
+          <label><input type="checkbox" name="check_observe"> 我先仔細觀察，再開始畫。</label>
+          <label><input type="checkbox" name="check_large"> 我的圖畫得夠大、夠清楚。</label>
+          <label><input type="checkbox" name="check_shape"> 整體外形與觀察物相似。</label>
+          <label><input type="checkbox" name="check_ratio"> 各部分的比例合理。</label>
+          <label><input type="checkbox" name="check_structure"> 重要構造沒有遺漏。</label>
+          <label><input type="checkbox" name="check_honest"> 沒有加入實際不存在的構造。</label>
+          <label><input type="checkbox" name="check_lines"> 線條清楚，不過度塗抹。</label>
+          <label><input type="checkbox" name="check_leaders"> 標示線整齊且不交叉。</label>
+          <label><input type="checkbox" name="check_labels"> 已加入圖名及構造名稱。</label>
+          <label><input type="checkbox" name="check_scale"> 必要時加入比例尺。</label>
+          <label><input type="checkbox" name="check_context"> 已記錄日期、地點與觀察工具。</label>
+          <label><input type="checkbox" name="check_review"> 我再次對照觀察物並完成修正。</label>
+          <label><input type="checkbox" name="check_ai"> AI 生成或協助的內容已經過查證。</label>
+        </fieldset>
+        <div class="record-actions">
+          <button class="primary-button compact" type="submit">立即儲存</button>
+          <button class="secondary-button compact" id="export-record" type="button">匯出 Markdown</button>
+          <button class="secondary-button compact" id="print-record" type="button">列印紀錄表</button>
+          <a class="secondary-button compact" href="downloads/scientific-drawing-worksheet.html" target="_blank" rel="noopener noreferrer">下載空白學習單 <span aria-hidden="true">↗</span></a>
+          <button class="text-button compact danger-quiet" id="clear-record" type="button">清除紀錄</button>
+        </div>
+        <p class="feedback" id="record-feedback" role="status">尚未填寫；輸入後會自動儲存。</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="lesson-footer">
+    <button type="button" id="prev-panel">← 上一單元</button>
+    <p><span id="footer-current">01</span> / 12 · <span id="footer-title">首頁</span></p>
+    <button type="button" id="next-panel">下一單元 →</button>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="回到頂端">↑</button>
+
+  <dialog class="gallery-dialog" id="gallery-dialog" aria-labelledby="gallery-dialog-title">
+    <button type="button" class="dialog-close" aria-label="關閉放大圖">×</button>
+    <img id="gallery-dialog-image" alt="">
+    <div><h2 id="gallery-dialog-title"></h2><p>AI 生成教學示意圖；實際物種特徵請配合標本、圖鑑或可信資料查證。</p></div>
+  </dialog>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/quiz.js" defer></script>
+  <script src="js/records.js" defer></script>
+</body>
+</html>

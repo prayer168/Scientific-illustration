@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>科學繪圖空白學習單</title>
+  <style>
+    :root{font-family:system-ui,"Microsoft JhengHei",sans-serif;color:#26342b}
+    *{box-sizing:border-box}body{margin:0;background:#eee9dc;line-height:1.5}
+    main{width:min(210mm,calc(100% - 24px));margin:20px auto;padding:14mm;background:#fff;box-shadow:0 8px 30px #0002}
+    h1{margin:0;color:#234c36;font-family:Georgia,"Noto Serif TC",serif;font-size:28pt}header p{margin:4px 0 18px;color:#657068}
+    .meta{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.field{min-height:36px;border-bottom:1px solid #555;padding:5px}.field b{display:inline-block;min-width:92px}
+    .drawing{min-height:118mm;margin:18px 0;border:2px solid #775642;background:linear-gradient(#fff 95%,#dcecf3 96%) 0 0/100% 9mm;position:relative}
+    .drawing::before{content:"繪圖區（請畫得夠大，必要時加入比例尺）";position:absolute;left:10px;top:8px;color:#777;font-size:10pt}
+    .notes{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.box{min-height:34mm;padding:8px;border:1px solid #888}.box h2{margin:0 0 5px;font-size:12pt;color:#234c36}
+    .check{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin-top:15px;padding:10px;border:1px solid #888;font-size:10pt}.check h2{grid-column:1/-1;margin:0 0 5px;font-size:12pt}.check p{margin:0}
+    .actions{display:flex;gap:8px;justify-content:center;margin:18px}.actions button,.actions a{min-height:44px;padding:10px 16px;border:1px solid #234c36;border-radius:999px;color:#234c36;background:white;font-weight:700;text-decoration:none;cursor:pointer}
+    footer{margin-top:10px;color:#666;font-size:9pt}
+    @media(max-width:650px){main{padding:18px}.meta,.notes,.check{grid-template-columns:1fr}.check h2{grid-column:auto}.drawing{min-height:70vh}}
+    @page{size:A4 portrait;margin:0}@media print{body{background:white}.actions{display:none}main{width:210mm;min-height:297mm;margin:0;padding:12mm;box-shadow:none}.drawing{min-height:116mm}}
+  </style>
+</head>
+<body>
+  <div class="actions"><button type="button" onclick="print()">列印／另存 PDF</button><a href="../index.html#records">返回教材</a></div>
+  <main>
+    <header><h1>科學繪圖觀察紀錄</h1><p>先仔細觀察，再用圖像、量測與文字留下證據。</p></header>
+    <section class="meta" aria-label="基本觀察資料">
+      <div class="field"><b>作品名稱：</b></div><div class="field"><b>觀察日期：</b></div>
+      <div class="field"><b>觀察地點：</b></div><div class="field"><b>觀察者：</b></div>
+      <div class="field"><b>觀察對象：</b></div><div class="field"><b>使用工具：</b></div>
+      <div class="field"><b>實際大小：</b></div><div class="field"><b>觀察角度：</b></div>
+    </section>
+    <section class="drawing" aria-label="科學繪圖空白區"></section>
+    <section class="notes">
+      <div class="box"><h2>主要外形與特殊構造</h2></div><div class="box"><h2>顏色與紋理</h2></div>
+      <div class="box"><h2>我的發現</h2></div><div class="box"><h2>尚未確定與查證來源</h2></div>
+    </section>
+    <section class="check">
+      <h2>完成檢核</h2>
+      <p>□ 先觀察再畫</p><p>□ 圖畫得夠大、夠清楚</p><p>□ 比例合理</p><p>□ 重要構造沒有遺漏</p>
+      <p>□ 沒有杜撰構造</p><p>□ 線條清楚</p><p>□ 標示線不交叉</p><p>□ 圖名與構造名稱完整</p>
+      <p>□ 必要時有比例尺</p><p>□ 日期、地點與工具完整</p><p>□ 再次對照並修正</p><p>□ AI 內容已查證</p>
+    </section>
+    <footer>科學繪圖探究室｜Scientific Illustration Lab · 格式可能因學校、研究領域或出版單位而不同。</footer>
+  </main>
+</body>
+</html>
